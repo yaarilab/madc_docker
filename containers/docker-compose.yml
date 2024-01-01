@@ -5,11 +5,8 @@ services:
         image: madc
         container_name: madc
         volumes:
-            - /home/ubuntu/clareo_docker/config/flask:/config
-            - /home/bcrlab/malachy7/minimal_adc/containers/madc/app:/app
-            - /home/bcrlab/malachy7/minimal_adc/containers/madc/log:/log
-            - /home/bcrlab/malachy7/minimal_adc/containers/madc/studies:/studies
-            - /misc/work/sequence_data_store/:/misc/work/sequence_data_store/
+            - /home/bcrlab/malachy7/madc_docker/config/flask/:/config
+            - /home/bcrlab/malachy7/madc_docker/studies/:/studies
         restart: unless-stopped
         environment:
             - GUNICORN_WORKERS=1
